@@ -1,13 +1,13 @@
 (function(exports) {
-  function headlines() {
+  function Headlines() {
     this._api = '';
   }
-  headlines.prototype.recieveAPIrequest = function(xml) {
-    this._api = xml;
+  Headlines.prototype.receiveAPIrequest = function(data) {
+    return this._api = data;
   };
-  headlines.prototype.getAPI = function() {
+  Headlines.prototype.getAPI = function() {
     return this._api;
   };
 
-  exports.headlines = headlines;
+  exports.Headlines = Headlines;
 })(this);

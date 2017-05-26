@@ -1,1 +1,1 @@
-var headlines = new headlines();
+var headlines = new Headlines();
