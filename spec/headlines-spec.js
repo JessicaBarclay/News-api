@@ -11,9 +11,11 @@
 
 (function() {
   console.log("UNIT TEST: Headlines can return stored API data");
+
   var headlines, data;
   headlines = new Headlines();
   data = "It is sunny. I want icecream";
+  
   headlines.receiveAPIrequest(data);
   assert.isEqual(headlines.getAPI(), data);
 })();
