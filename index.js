@@ -1,7 +1,7 @@
 function initialize() {
-  this.headlines = new Headlines();
-  this.newsfeedController = new newsfeedController();
-  loadAPI();
+  var headlines = new Headlines();
+  var newsfeedController = new NewsfeedController();
+  guardianAPI();
   newsfeedController.renderHeadlines();
 }
 window.onload = initialize;

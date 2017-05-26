@@ -1,12 +1,13 @@
 (function(exports){
 
-  function newsfeedController(){
+  function NewsfeedController(view = new HeadlinesViewer()){
+    this._view = view;
   }
 
-  newsfeedController.prototype.renderHeadlines = function () {
-    document.getElementById("headlines").innerHTML = headlines.getAPI();
+  NewsfeedController.prototype.renderHeadlines = function () {
+    document.getElementById("headlines").innerHTML = this._view._headlines.getAPI();
   };
 
-  exports.newsfeedController = newsfeedController;
+  exports.NewsfeedController = NewsfeedController;
 
 })(this);
